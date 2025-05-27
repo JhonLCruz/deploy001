@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard con Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-chart-line"></i>
+            <h2>Menú Principal</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+            <li><i class="fas fa-chart-bar"></i> Reportes</li>
+            <li><i class="fas fa-cog"></i> Configuración</li>
+            <li><i class="fas fa-users"></i> Usuarios</li>
+            <li><i class="fas fa-question-circle"></i> Ayuda</li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+            <div class="user-info">
+                <span>Usuario Admin</span>
+                <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="Usuario">
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="flex-between">
+                    <div>
+                        <div class="title">Contratos Activos</div>
+                        <div class="value">1,234</div>
+                        <div class="change positive">+12%</div>
+                    </div>
+                    <div class="icon-container bg-orange">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="flex-between">
+                    <div>
+                        <div class="title">Mora Pendiente</div>
+                        <div class="value">$45,678</div>
+                        <div class="change negative">-5%</div>
+                    </div>
+                    <div class="icon-container bg-red">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="flex-between">
+                    <div>
+                        <div class="title">Vehículos Activos</div>
+                        <div class="value">892</div>
+                        <div class="change positive">+8%</div>
+                    </div>
+                    <div class="icon-container bg-blue">
+                        <i class="fas fa-car"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="flex-between">
+                    <div>
+                        <div class="title">Garantías Vigentes</div>
+                        <div class="value">567</div>
+                        <div class="change positive">+3%</div>
+                    </div>
+                    <div class="icon-container bg-green">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" data-tab="informacion">
+                <i class="fas fa-info-circle"></i> Información
+            </div>
+            <div class="tab" data-tab="botones">
+                <i class="fas fa-money-bill-wave"></i> Modalidades de pago
+            </div>
+            <div class="tab" data-tab="vinculos">
+                <i class="fas fa-link"></i> Vínculos
+            </div>
+            <div class="tab" data-tab="calculo">
+                <i class="fas fa-calculator"></i> Módulo Cálculo
+            </div>
+            <div class="tab" data-tab="reporte">
+                <i class="fas fa-file-alt"></i> Módulo Reporte
+            </div>
+        </div>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Info Cards Section -->
+            <div class="info-cards">
+                <!-- Tab Contents -->
+                <div class="tab-content active" id="informacion">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Consulta Informativa</h3>
+                        <p class="card-description">Accede a información detallada sobre consultas y datos del sistema.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Cálculo de Mora</h3>
+                        <p class="card-description">Herramienta para calcular mora e intereses pendientes.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Gestión de Garantías</h3>
+                        <p class="card-description">Gestiona garantías y reclamaciones de clientes.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3>Recargo por Mora</h3>
+                        <p class="card-description">Calcula recargos por mora y actualiza datos pendientes.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Vehículos Activos</h3>
+                        <p class="card-description">Consultar y gestionar vehículos en el sistema</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="botones">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3>Enviar Link de pagos</h3>
+                        <p class="card-description">Envía los pagos al cliente de forma sencilla.</p>
+                        <button class="card-btn">Enviar</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Enviar afiliación tarjeta</h3>
+                        <p class="card-description">Envía los datos de afiliación de la tarjeta.</p>
+                        <button class="card-btn">Enviar</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <h3>Generar archivo débito</h3>
+                        <p class="card-description">Genera un nuevo archivo de débito automático.</p>
+                        <button class="card-btn">Generar</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="vinculos">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Consulta Informativa</h3>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Cálculo de Mora</h3>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Gestión de Garantías</h3>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="calculo">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Módulo de Cálculos</h3>
+                        <p class="card-description">Accede a todas las herramientas de cálculo.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Reportes Financieros</h3>
+                        <p class="card-description">Genera reportes detallados de cálculos.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="reporte">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Reportes Estadísticos</h3>
+                        <p class="card-description">Genera reportes con gráficos y estadísticas.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Exportar a PDF</h3>
+                        <p class="card-description">Exporta reportes en formato PDF.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3>Exportar a Excel</h3>
+                        <p class="card-description">Exporta reportes en formato Excel.</p>
+                        <button class="card-btn">Acceder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activities Section -->
+            <div class="activities-section">
+                <div class="activities-card">
+                    <div class="activities-card-header">
+                        <div class="activities-card-title">
+                            <i class="fas fa-clock"></i>
+                            Actividades del Día
+                        </div>
+                        <div class="activities-card-description">
+                            Tareas pendientes para realizar hoy
+                        </div>
+                    </div>
+                    <div class="activities-card-content">
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <p class="activity-client">Juan Pérez</p>
+                                <p class="activity-task">Revisar documentación del contrato #12345</p>
+                                <p class="activity-due">Vencimiento: 15:00 hrs</p>
+                            </div>
+                            <div class="activity-actions">
+                                <span class="badge badge-destructive">alta</span>
+                                <button class="btn-outline">Ejecutar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <p class="activity-client">Empresa XYZ</p>
+                                <p class="activity-task">Actualizar datos de garantía extendida</p>
+                                <p class="activity-due">Vencimiento: 18:00 hrs</p>
+                            </div>
+                            <div class="activity-actions">
+                                <span class="badge badge-default">media</span>
+                                <button class="btn-outline">Ejecutar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <p class="activity-client">María González</p>
+                                <p class="activity-task">Enviar recordatorio de pago</p>
+                                <p class="activity-due">Vencimiento: 12:00 hrs</p>
+                            </div>
+                            <div class="activity-actions">
+                                <span class="badge badge-secondary">baja</span>
+                                <button class="btn-outline">Ejecutar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
